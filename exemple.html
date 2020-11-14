@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ikao - Ikéa, mais en mieux !</title>
+    <meta charset="UTF-8">
+
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    
+    <!--montserrat google font avec les variantes --> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet"> 
+    
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+
+</head>
+<body>
+	<!--
+
+		Comment commencer une page HTML ? 
+		- établir un postulat de notre page : 
+			-> quels sont les éléments dont je dispose, 
+			-> y a t-il des éléments récurrents (type de liens, styles de titres, etc)
+			-> Organiser une hierarchie logique du document : prioriser l'importance des éléments
+		- Commencer le code HTML :
+			-> Etablir un squelette souple (uniquement les grandes zones dans un 1er temps)
+			-> Remplir chaque zone de manière de plus en plus précise, et construire le Css en parralèlle 
+			-> Aller à l'essentiel (intégration Grosse maille), puis affiner chaque zones / éléments
+			-> Chaque élément ne doit pas géner le reste de la page
+		- Affiner l'intégration et le rendu
+			-> Garder la maquette sous les yeux au maximum
+			-> Affiner les tailles de typos, écarts, espaces, etc 
+			-> Ajouter des éléments HTML si besoin uniquement pour la mise en page
+			-> Objectif : Avoir l'HTML le plus propre possible (c'est à dire le plus logique et le moins verbeux possible)
+
+		Bonus : la class "container" => 
+			peut servir a mettre un centrer un element structurant ;
+				.container{
+					max-width: 1200px; /* boite 1200px max centrée */
+					margin: 0 auto; /* centrage horizontal d'un display block */
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+		Optimisation CSS : 
+		- Syntaxe BEM pour le nommage des classes : essayer d'etre cohérent niveau marquage et styles
+        - DRY (dont repeat yourself) => mutualisez votre code CSS
+	-->
+
+	<header>
+		<div class="pre-header">
+			
+			<div class="container-header">
+				<!-- coordonnees -->
+				<nav class="pre-header__coords">
+					<div>
+						<img src="./icones/icones-png/phone-receiver.png" alt="">
+						<a href="">+331010101</a>
+					</div>
+					<div>
+						<img src="./icones/icones-png/mail.png" alt="">
+						<a href="">info@ikao.com</a>
+					</div>
+				</nav>
+				<!-- mon compte -->
+				<nav class="pre-header__account">
+					<a href="">Mon compte</a>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container main-header" id="main-header">
+			<!-- logo -->
+			<img  class="logo-ikao" src="./images/logos/logo.png" alt="">
+			<!-- menu -->
+			<nav class="main-header__menu">
+				<a href="">Accueil</a>
+				<a href="">Produits</a>
+				<a href="">A Propos</a>
+				<a href="">Blog</a>
+				<a href="">Contact</a>
+			</nav>
+			<!-- recherche ici pas besoin de formulaire (on a pas de zone de saisie) -->
+			<img class="loupe" src="./icones/icones-png/magnifying-glass.png" alt="">
+			<!-- panier -->
+			<div class="container-panier">
+				<img src="./icones/icones-png/paper-bag.png" alt="">
+				<div>
+					<a href="">Panier</a>
+					<p>3 produits 74.00€</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<main class="homepage container">
+
+		<section class="products-grid">
+			<div class="lampe-design">
+				<div>
+					<p>Idées design 2017</p>
+					<p>Nouvelle</p>
+					<p>Collection</p>
+					<p>Votre intérieur sera le plus beau<br>
+					Même à la Tv c'est pas si beau</p>
+					<p>79.00€</p>
+				</div>
+			</div>
+			<div class="canape-3-cuir">
+				<div>
+					<p>Canape - Fautueil</p>
+					<p>Canapé 3 places en cuir</p>
+					<div class="lien-acheter">
+						<p>Acheter</p>
+						<img src="./icones/icones-png/next.png" class="voir-produit" alt="">
+					</div>
+					<div class="reduction-canape">
+						<p>656.00€</p>
+						<p>499.00€</p>
+					</div>
+				</div>
+			</div>
+			<div class="banc-blanc">
+				<div>
+					<p>banc-blanc</p>
+					<p>Avec coussins</p>
+					<div>
+						<p>99.00€</p>
+						<p>Acheter</p>
+					</div>
+				</div>
+			</div>
+			<div class="chaise-blanche">
+				<div>
+					<p>Chaise et </p>
+					<p>Accoudoirs</p>
+					<p>126.00€</p>
+					<p>99.00€</p>
+					<div class="profiter-chaise-blanche">
+						<p>Vite j'en profite</p>
+						<img src="./icones/icones-png/next.png" class="voir-produit" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="chaise-zio">
+				<div>
+					<p>Chaises</p>
+					<p>Zio Dinning</p>
+					<div class="lien-acheter">
+						<p>Acheter</p>
+						<img src="./icones/icones-png/next.png" class="voir-produit" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="lampe-totem">
+				<div>
+					<p>Lampes / accessoires</p>
+					<p>Totem Floor</p>
+					<div class="lien-acheter">
+						<p>Acheter</p>
+						<img src="./icones/icones-png/next.png" class="voir-produit" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="tabouret-cool">
+				<div>
+					<p>Prix design 2017 - Bar</p>
+					<p>Tissu rembourré</p>
+					<p>Cool le Tabouret</p>
+					<p>Vos fesses n'auront jamais eu autant d'amour...</p>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="products-selection">
+			<!-- en ce moment, recents, meilleures ventes ... -->
+			<nav class="products-selection__header">
+				<a href="" class="active-selection">En ce moment</a>
+				<span class="barre-droite"></span>
+				<a href="">Récents</a>
+				<span class="barre-droite"></span>
+				<a href="">Meilleures ventes</a>
+			</nav>
+			<div class="products-list">
+				<div class="bombi-chair">
+					<div></div>
+					<div class="description-produits">
+						<p>Bombi Chair</p>
+						<p>399,00 €</p>
+					</div>
+				</div>
+				<div class="marvelous">
+					<div></div>
+					<div class="description-produits">
+						<p>Marvelous Seater</p>
+						<p>599,00 €</p>
+					</div>
+				</div>
+				<div class="armrests">
+					<div>
+						<div class="reduction-product">
+							<p>-15%</p>
+						</div>
+					</div>
+					<div class="description-produits">
+						<p>Chair armrests</p>
+						<p>200,00 €</p>
+					</div>
+				</div>
+				<div class="new-bombi">
+					<div></div>
+					<div class="description-produits">
+						<p>Bombi Chair new version</p>
+						<p>399,00 €</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		
+		<section class="categories">
+			<!-- horloge -->
+			<div class="categories-horloge">
+				<div class="content-horloge">
+					<div>
+						<p>Décoration</p>
+						<p>Horloges</p>
+					</div>
+					<div class="acheter-voir-produit">
+						<p>Voir</p>
+						<img src="./icones/icones-png/next.png" class="voir-produit" alt="">
+					</div>
+				</div>
+			</div>
+			<!-- table basse -->
+			<div class="categories-table">
+				<div class="content-table">
+					<div>
+						<p>Table basse</p>
+						<p>Palettes paillettes</p>
+					</div>
+					<div class="acheter-voir-produit">
+						<p>Voir</p>
+						<img src="./icones/icones-png/next.png" class="voir-produit" alt="">
+					</div>
+				</div>
+			</div>
+			<!-- lampes -->
+			<div class="categories-lampes">
+				<div class="content-lampes">
+					<div>
+						<p>Lampes</p>
+						<p>Que la lumière soit</p>
+					</div>
+					<div class="acheter-voir-produit">
+						<p>Voir</p>
+						<img src="./icones/icones-png/next.png" class="voir-produit" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="best-products">
+			<!-- meilleures ventes -->
+			<h2>Meilleures ventes</h2>
+			<div>
+				<div class="puff-chair">
+					<div>
+						<div class="new-product">
+							<p>New</p>
+						</div>
+						<div class="hover-present-product">
+							<div>
+								<img src="./icones/icones-png/paper-bag.png" alt="">
+								<p>Acheter</p>
+							</div>
+							<img src="./icones/icones-png/heart.png" alt="">
+							<img src="./icones/icones-png/exchange-arrows.png" alt="">
+						</div>
+					</div>
+					<div class="description-best-products">
+						<p>Puff Chair</p>
+						<p>287,00 €</p>
+					</div>
+				</div>
+				<div class="daddy-chair">
+					<div>
+						<div class="hover-present-product">
+							<div>
+								<img src="./icones/icones-png/paper-bag.png" alt="">
+								<p>Acheter</p>
+							</div>
+							<img src="./icones/icones-png/heart.png" alt="">
+							<img src="./icones/icones-png/exchange-arrows.png" alt="">
+						</div>
+					</div>
+					<div class="description-best-products description-daddy">
+						<p>Daddy Chair</p>
+						<p>399,00 €</p>
+					</div>
+				</div>
+				<div class="wood-chair">
+					<div>
+						<div class="hover-present-product">
+							<div>
+								<img src="./icones/icones-png/paper-bag.png" alt="">
+								<p>Acheter</p>
+							</div>
+							<img src="./icones/icones-png/heart.png" alt="">
+							<img src="./icones/icones-png/exchange-arrows.png" alt="">
+						</div>
+					</div>
+					<div class="description-best-products">
+						<p>Wood Chair</p>
+						<p>198,00 €</p>
+					</div>
+				</div>
+				<div class="cheers-chair">
+					<div>
+						<div class="reduction-product">
+							<p>-15%</p>
+						</div>
+						<div class="new-product">
+							<p>New</p>
+						</div>
+						<div class="hover-present-product">
+							<div>
+								<img src="./icones/icones-png/paper-bag.png" alt="">
+								<p>Acheter</p>
+							</div>
+							<img src="./icones/icones-png/heart.png" alt="">
+							<img src="./icones/icones-png/exchange-arrows.png" alt="">
+						</div>
+					</div>
+					<div class="description-best-products">
+						<p>Cheers Chair</p>
+						<p>200,00 €</p>
+					</div>
+				</div>
+				<div class="loiret-chair">
+					<div>
+						<div class="hover-present-product">
+							<div>
+								<img src="./icones/icones-png/paper-bag.png" alt="">
+								<p>Acheter</p>
+							</div>
+							<img src="./icones/icones-png/heart.png" alt="">
+							<img src="./icones/icones-png/exchange-arrows.png" alt="">
+						</div>
+					</div>
+					<div class="description-best-products">
+						<p>Loiret Chair</p>
+						<p>200,00 €</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<!--footer -->
+	<div class="partners container">
+		<!-- logos des partenaires (suedois mais pas que) -->
+		<h2>Suedois et pas que ...</h2>
+		<div>
+			<div class="previous"></div>
+			<div class="devon"></div>
+			<div class="gan"></div>
+			<div class="artek"></div>
+			<div class="toncelli"></div>
+			<div class="duravit"></div>
+			<div class="zanotta"></div>
+			<div class="next"></div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="advantages-footer">
+				<!-- livraison offerte, support, carte cadeaux, etc -->
+				<div class="livraison">
+					<img src="./icones/icones-png/plane.png" alt="">
+					<div>
+						<p>Livraison offerte</p>
+						<p>Pour toute commande</p>
+					</div>
+				</div>
+				<div class="support">
+					<img src="./icones/icones-png/help-lifeguard-symbol.png" alt="">
+					<div>
+						<p>Support 24 / 7</p>
+						<p>Un problème ? Pas de problème</p>
+					</div>
+				</div>
+				<div class="carte-cadeaux">
+					<img src="./icones/icones-png/dropbox-logo.png" alt="">
+					<div>
+						<p>Carte cadeaux</p>
+						<p>Pour faire plaisir</p>
+					</div>
+				</div>
+				<div class="paiement-securise">
+					<img src="./icones/icones-png/paper-bill.png" alt="">
+					<div>
+						<p>Securite</p>
+						<p>Paiement 100% securisé</p>
+					</div>
+				</div>
+				
+			</div>
+			<hr class="container">
+			<!-- liens, logo, newsletter etc -->
+			<div class="main-footer">
+				<div class="company-footer">
+					<div>
+						<img src="./images/logos/logo.png" alt="">
+						<p>Les meubles Ikea, mais en mieux</p>
+					</div>
+					<div>
+						<img src="./icones/icones-png/placeholder-filled-point.png" alt="">
+						<p>Quelque part en France, près de Lens</p>
+					</div>
+					<div>
+						<div>
+							<img src="./icones/icones-png/phone-receiver.png" alt="">
+							<p>+33030303030</p>
+						</div>
+						<div>
+							<img src="./icones/icones-png/mail.png" alt="">
+							<p>info@ikao.com</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="menu-footer">
+					<div class="footer-categories">
+						<h4>Categories</h4>
+						<p>Chaises</p>
+						<p>Canapé</p>
+						<p>Salon</p>
+						<p>Chambres</p>
+						<p>Tables</p>
+						<p>Nouveautés</p>
+					</div>
+					<div class="footer-information">
+						<h4>Information</h4>
+						<p>A propos</p>
+						<p>Contact</p>
+						<p>Conditions</p>
+						<p>Service client</p>
+						<p>FAQs</p>
+					</div>
+					<div class="footer-compte">
+						<h4>Compte</h4>
+						<p>Mon compte</p>
+						<p>Mes commandes</p>
+						<p>Panier</p>
+						<p>Paiement sécurisé</p>
+					</div>
+				</div>
+
+				<div class="newsletter-footer">
+					<h4>Newsletter</h4>
+					<div>
+						<input type="text">
+						<button>Souscrire</button>
+					</div>
+					<h4>Nous suivre</h4>
+					<div class="social-network">
+						<a href=""><img src="./icones/icones-png/twitter-logo-silhouette.png" alt=""></a>
+						<a href=""><img src="./icones/icones-png/facebook-logo.png" alt=""></a>
+						<a href=""><img src="./icones/icones-png/google-plus.png" alt=""></a>
+						<a href=""><img src="./icones/icones-png/youtube-logo.png" alt=""></a>
+						<a href=""><img src="./icones/icones-png/linkedin-logo.png" alt=""></a>
+						<a href=""><img src="./icones/icones-png/whatsapp.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="sub-footer">
+		<div class="container sub-footer-container">
+			<!-- copyright, logos paiement -->
+			<div class="Analyse de l’image">
+				<p>Ikao.com - tout droits réservés</p>
+			</div>
+
+			<div class="sub-footer__payments">
+				<img src="./icones/icones-png/visa-pay-logo.png" alt="">
+				<img src="./icones/icones-png/paypal-logo.png" alt="">
+				<img src="./icones/icones-png/mastercard.png" alt="">
+				<img src="./icones/icones-png/discover-logo-of-pay-system.png" alt="">
+				<img src="./icones/icones-png/amazon.png" alt="">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
